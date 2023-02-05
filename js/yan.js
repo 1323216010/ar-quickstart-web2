@@ -80,7 +80,7 @@ if (isSafari) navigator.serviceWorker.register("./range-requests.sw.js");
       }
       
       const btn = $(
-        `<button >${name}</button>`
+        `<button class="ui primary button elastic loading">${name}</button>`
       ).prependTo("#effects")
 
       const effect = await Effect.preload(`effects/${effectName}.zip`)
