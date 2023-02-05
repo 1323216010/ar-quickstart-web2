@@ -36,13 +36,17 @@
 <!--         <span>or</span>
         <label class="ui button">
           <input type="file" id="source-image" accept="image/*">Upload a photo</button>
-        </label>
-      </div> -->
+        </label> -->
+      </div>
       <output></output>
     </main>
 
     <p style="text-align:center">
       <a id="effects"></a>
+    </p>
+
+    <p style="text-align:center">
+      <span>仅在pc端谷歌浏览器测试成功</span>
     </p>
 
 
@@ -58,10 +62,3 @@
 </html>
 
 <script type="module" src="/js/yan.js"></script>
-<script>
-  async function aa() {
-  const effect = await Effect.preload(`effects/Hipster1.zip`)
-
-  player.applyEffect(effect)
-}
-  </script>

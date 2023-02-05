@@ -34,12 +34,12 @@ if (isSafari) navigator.serviceWorker.register("./range-requests.sw.js");
     //#endregion
 
     //#region source
-    $("#source-image").on("change", e => {
+/*     $("#source-image").on("change", e => {
       source?.stop?.()
       source = new Image(e.target.files[0])
       player.use(source, { fps: lock })
       Dom.render(player, "#webar")
-    })
+    }) */
     $("#source-webcam").on("click", e => {
       source?.stop?.()
       source = new Webcam()
@@ -72,11 +72,11 @@ if (isSafari) navigator.serviceWorker.register("./range-requests.sw.js");
     $.each(effects, async (idx, effectName) => {
       let name = effectName
       if(effectName ==="Hipster1") {
-        name = "口罩"
+        name = "添加口罩模型"
       }
 
       if(effectName ==="Hipster2") {
-        name = "替换口罩图片"
+        name = "替换模型图片"
       }
       
       const btn = $(
