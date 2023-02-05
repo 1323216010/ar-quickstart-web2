@@ -72,7 +72,7 @@ if (isSafari) navigator.serviceWorker.register("./range-requests.sw.js");
     $.each(effects, async (idx, effectName) => {
       let name = effectName
       if(effectName ==="Hipster1") {
-        name = "添加口罩模型"
+        name = "原始口罩模型"
       }
 
       if(effectName ==="Hipster2") {
