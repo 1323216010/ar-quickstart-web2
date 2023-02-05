@@ -70,7 +70,7 @@ if (isSafari) navigator.serviceWorker.register("./range-requests.sw.js");
 
     //#region effects
     $.each(effects, async (idx, effectName) => {
-      let name = effectName
+      let name;
       if(effectName ==="Hipster1") {
         name = "原始模型"
       }
