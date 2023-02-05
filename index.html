@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>AR试穿</title>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.6/dist/semantic.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.6/dist/semantic.min.js"></script>
+</head>
+
+<body class="ui container">
+    <div>
+      <p style="text-align:center">
+        <label>
+          固定FPS
+          <select class="ui dropdown">
+            <option value="30" selected>30</option>
+            <option value="60">60</option>
+            <option value="-1">🔥 Unlocked 🔥</option>
+          </select>
+        </label>
+        <button class="ui button" id="reset">重置</button>
+      </p>
+
+    </div>
+
+    <main>
+      <div id="webar"></div>
+      <div id="source">
+        <p style="text-align:center">
+          <button class="ui button" id="source-webcam" style="text-align: center;">打开摄像头</button>
+        </p>
+  
+<!--         <span>or</span>
+        <label class="ui button">
+          <input type="file" id="source-image" accept="image/*">Upload a photo</button>
+        </label>
+      </div> -->
+      <output></output>
+    </main>
+
+    <p style="text-align:center">
+      <a id="effects"></a>
+    </p>
+
+
+<!--     <div id="fps">
+      Webcam FPS: <span id="cam"></span>
+      </br>
+      Processing FPS: <span id="processing"></span>
+      </br>
+      Render FPS: <span id="render"></span>
+    </div> -->
+</body>
+
+</html>
+
+<script type="module" src="/js/yan.js"></script>
+<script>
+  async function aa() {
+  const effect = await Effect.preload(`effects/Hipster1.zip`)
+
+  player.applyEffect(effect)
+}
+  </script>
