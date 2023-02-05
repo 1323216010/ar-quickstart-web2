@@ -76,7 +76,7 @@ if (isSafari) navigator.serviceWorker.register("./range-requests.sw.js");
       }
 
       if(effectName ==="Hipster2") {
-        name = "替换模型图片"
+        name = "替换模型贴图"
       }
       
       const btn = $(
