@@ -68,6 +68,8 @@ if (isSafari) navigator.serviceWorker.register("./range-requests.sw.js");
     }, 1000)
     //#endregion
 
+    var face_low_BaseColor2 = await Effect.preload(`/effects/face_low_BaseColor2.zip`)
+    console.log(face_low_BaseColor2._resource._data['face_low_BaseColor.png'])
     //#region effects
     $.each(effects, async (idx, effectName) => {
       let name;
@@ -83,8 +85,11 @@ if (isSafari) navigator.serviceWorker.register("./range-requests.sw.js");
         `<button class="ui primary button elastic loading">${name}</button>`
       ).prependTo("#effects")
 
-      const effect = await Effect.preload(`effects/${effectName}.zip`)
+      const effect = await Effect.preload(`effects/Hipster1.zip`)
 
+      if(effectName === 'Hipster2') {
+        effect._resource._data['images/face_low_BaseColor.png'] = face_low_BaseColor2._resource._data['face_low_BaseColor.png']
+      }
       btn.on("click", () => player.applyEffect(effect))
       btn.removeClass("loading")
     })
