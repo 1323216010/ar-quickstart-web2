@@ -19,7 +19,7 @@ if (isSafari) navigator.serviceWorker.register("./range-requests.sw.js");
       }),
       // Find more about available modules:
       // https://docs.banuba.com/face-ar-sdk-v1/generated/typedoc/classes/Module.html
-      Module.preload(["face_tracker", "background", "hair"].map(m => `https://cdn.jsdelivr.net/npm/@banuba/webar/dist/modules/${m}.zip`)),
+      Module.preload(["face_tracker"].map(m => `https://cdn.jsdelivr.net/npm/@banuba/webar/dist/modules/${m}.zip`)),
     ])
 
     await player.addModule(...modules)
@@ -69,7 +69,6 @@ if (isSafari) navigator.serviceWorker.register("./range-requests.sw.js");
     //#endregion
 
     var face_low_BaseColor2 = await Effect.preload(`/effects/face_low_BaseColor2.zip`)
-    console.log(face_low_BaseColor2._resource._data['face_low_BaseColor.png'])
     //#region effects
     $.each(effects, async (idx, effectName) => {
       let name;
@@ -98,7 +97,7 @@ if (isSafari) navigator.serviceWorker.register("./range-requests.sw.js");
 
 
     //#region ruler
-    player.addEventListener("effectactivated", ({ detail: effect }) => {
+/*     player.addEventListener("effectactivated", ({ detail: effect }) => {
       const isRuler = effect.scene().getName() === "ruler"
 
       player.removeEventListener("framedata", onFrameData)
@@ -120,7 +119,7 @@ if (isSafari) navigator.serviceWorker.register("./range-requests.sw.js");
       const distance = frameData.getRuler()
 
       $("output").text(`Distance: ${distance.toFixed(2)}`)
-    }
+    } */
     //#endreegion
 
   })()
