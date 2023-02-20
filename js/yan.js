@@ -14,7 +14,7 @@ if (isSafari) navigator.serviceWorker.register("./range-requests.sw.js");
 
     const [player, modules] = await Promise.all([
       Player.create({
-        clientToken: "0EOuU5qV8q+n5lu5i2ewrzRKfl6KoEI4M7W1GH3HmBnIrkvZ5UFkfyXBArfdDPJ+ruILLhDjOrIbQji4RQLoFqZ6zIvTZOOVAcdrM/qGgzdNiv1jLHq12mexlUOOm7mxDBeuccYFsN5AggiYDzhEQAD42AxMTvFOvMP+3tmO8h9yOzUbFjK4AlOFL0jWE703NrxoOfEs74ePct64gi/ONAJ6K1D8GLLsWUKBzXHS+hyzGqxuj9yiOJsLtoxZp2Pp2Hs/r+Id2/7WwqUx4N3+g75l5B1UwBsQv73urcNXlx4AeW+3p5opSq9L4TGg0+ZrRBvzffK5uUkZyaDTNmyca7Bxn4Xq9RAcNUtdijPckDB9Z1kGxCTsnEtYif1xEk0tEfAfowi5yzbo7N2XajwXILQu8/PoX4DpARNghaVXd49g3w8Ohwmc0o7Tek5pHZ/RIELO4rdBK9vtONV+2RsmnpXzoWRg4curzydcK+E+8VW3vUtvRFjRcS900u0Ot1JZWXhfB5x/4hTnFKzez3PKcvLzahAgNV1JNsg=",
+        clientToken: "Qk5CIEv3NqPBD1XD9ECF6usFXQmeKdu+qODvk9GtVZ+nB5FCwCaaEOGvZdpJ3AnyBc7+xgycq114RCMVHgrx+cARLJqNjTBzIkqcuTzdn8n9709QF+Ef4QMu2GP6eb5XboVsle+eSmZeLGKv7k3YYXuky9fxjzQFfdCXMAx7O5xbwk9itnSBfxoNJzxEF5doHFrQ5F1SAj+D3cZyEQgPsDYBuGF52Im9/QRR5EpjHj89Urt/yQ0xIWWZMvRDr39szCXoDTAfY3EsGQUt/suj4jiT9Qr6zXC/Cw==",
 /*         proxyVideoRequestsTo: isSafari ? "___range-requests___/" : null, */
       }),
       // Find more about available modules:
