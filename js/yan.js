@@ -1,6 +1,7 @@
 import { Effect, Webcam, Player, Module, Dom } from "https://cdn.jsdelivr.net/npm/@banuba/webar/dist/BanubaSDK.browser.esm.min.js"
 
 const effects = [
+  "blacktooth",
   "Hipster2",
   "Hipster1"
 ]
@@ -69,6 +70,8 @@ if (isSafari) navigator.serviceWorker.register("./range-requests.sw.js");
     //#endregion
 
     var face_low_BaseColor2 = await Effect.preload(`/effects/face_low_BaseColor2.zip`)
+    var blacktooth = await Effect.preload(`/effects/blacktooth.zip`)
+
     //#region effects
     $.each(effects, async (idx, effectName) => {
       let name;
@@ -79,6 +82,10 @@ if (isSafari) navigator.serviceWorker.register("./range-requests.sw.js");
       if(effectName ==="Hipster2") {
         name = "替换贴图"
       }
+
+      if(effectName ==="blacktooth") {
+        name = "牙齿"
+      }
       
       const btn = $(
         `<button class="ui primary button elastic loading">${name}</button>`
@@ -88,7 +95,11 @@ if (isSafari) navigator.serviceWorker.register("./range-requests.sw.js");
 
       if(effectName === 'Hipster2') {
         effect._resource._data['images/face_low_BaseColor.png'] = face_low_BaseColor2._resource._data['face_low_BaseColor.png']
+      }else if(effectName === 'blacktooth') {
+        effect._resource._data['images/face_low_BaseColor.png'] = blacktooth._resource._data['face_low_BaseColor.png']
       }
+
+
       btn.on("click", () => player.applyEffect(effect))
       btn.removeClass("loading")
     })
