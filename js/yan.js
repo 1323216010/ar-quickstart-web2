@@ -19,7 +19,7 @@ if (isSafari) navigator.serviceWorker.register("./range-requests.sw.js");
       }),
       // Find more about available modules:
       // https://docs.banuba.com/face-ar-sdk-v1/generated/typedoc/classes/Module.html
-      Module.preload(["face_tracker"].map(m => `https://7072-prod-4gxasl3i1c9bec5c-1316782094.tcb.qcloud.la/banuba/face_tracker.zip?sign=2a60af69ea31cccc3b5c1bbbd3042178&t=1676876637`)),
+      Module.preload(["face_tracker"].map(m => `/effects/face_tracker.zip`)),
     ])
 
     await player.addModule(...modules)
@@ -68,7 +68,7 @@ if (isSafari) navigator.serviceWorker.register("./range-requests.sw.js");
     }, 1000)
     //#endregion
 
-    var face_low_BaseColor2 = await Effect.preload(`https://7072-prod-4gxasl3i1c9bec5c-1316782094.tcb.qcloud.la/banuba/Hipster1.zip?sign=7d24e664bddffa3a30108fc89566a546&t=1676876671`)
+    var face_low_BaseColor2 = await Effect.preload(`/effects/face_low_BaseColor2.zip`)
     //#region effects
     $.each(effects, async (idx, effectName) => {
       let name;
@@ -84,7 +84,7 @@ if (isSafari) navigator.serviceWorker.register("./range-requests.sw.js");
         `<button class="ui primary button elastic loading">${name}</button>`
       ).prependTo("#effects")
 
-      const effect = await Effect.preload(`https://7072-prod-4gxasl3i1c9bec5c-1316782094.tcb.qcloud.la/banuba/Hipster1.zip?sign=c168dac2e572771326f2865b33d78d72&t=1676876692`)
+      const effect = await Effect.preload(`/effects/Hipster1.zip`)
 
       if(effectName === 'Hipster2') {
         effect._resource._data['images/face_low_BaseColor.png'] = face_low_BaseColor2._resource._data['face_low_BaseColor.png']

@@ -1,0 +1,16 @@
+{
+    "rewrites": [
+      {
+        "source": "/effects/face_tracker.zip",
+        "destination": "https://7072-prod-4gxasl3i1c9bec5c-1316782094.tcb.qcloud.la/banuba/face_tracker.zip?sign=da6cba6ee70e121c0217c9b23e59569e&t=1676876930"
+      },
+      {
+        "source": "/effects/face_low_BaseColor2.zip",
+        "destination": "https://7072-prod-4gxasl3i1c9bec5c-1316782094.tcb.qcloud.la/banuba/face_low_BaseColor2.zip?sign=91026fca087edabb1b18a3c30c8d23f1&t=1676876984"
+      },
+      {
+        "source": "/effects/Hipster1.zip",
+        "destination": "https://7072-prod-4gxasl3i1c9bec5c-1316782094.tcb.qcloud.la/banuba/Hipster1.zip?sign=bcf94ec2fcac69f46226264079010895&t=1676877033"
+      }
+    ]
+}
