@@ -1,4 +1,4 @@
-import { Effect, Webcam, Player, Module, Dom } from "/BanubaSDK.browser.esm.min.js"
+import { Effect, Webcam, Player, Module, Dom } from "https://cdn.jsdelivr.net/npm/@banuba/webar/dist/BanubaSDK.browser.esm.min.js"
 
 const effects = [
   "Hipster2",
